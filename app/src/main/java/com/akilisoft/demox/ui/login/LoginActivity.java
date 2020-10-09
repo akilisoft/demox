@@ -24,6 +24,8 @@ public class LoginActivity extends AppCompatActivity {
     private int counter = 3;
     private TableSQLiteController tableSQLiteController;
     private Button loginButton;
+    private EditText usernameEditText;
+    private EditText passwordEditText;
 
 
     @Override
@@ -31,8 +33,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        final EditText usernameEditText = findViewById(R.id.editTextTextPersonName);
-        final EditText passwordEditText = findViewById(R.id.editTextTextPassword);
+        usernameEditText = findViewById(R.id.editTextTextPersonName);
+        passwordEditText = findViewById(R.id.editTextTextPassword);
         loginButton = findViewById(R.id.button);
         tableSQLiteController = new TableSQLiteController(this);
 
